@@ -20,6 +20,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-unused-vars': 2,
+    'class-methods-use-this': 0,
   },
   settings: {
     'import/resolver': {
