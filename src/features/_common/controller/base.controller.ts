@@ -1,7 +1,6 @@
 import { Express } from 'express';
-// import { injectable } from 'tsyringe';
 
-class BaseController {
+abstract class BaseController {
   protected readonly app: Express
 
   constructor(app: Express) {
