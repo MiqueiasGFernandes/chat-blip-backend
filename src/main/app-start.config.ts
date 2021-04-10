@@ -1,5 +1,5 @@
-const cors = require('cors');
-const express = require('express');
+import cors from 'cors';
+import express from 'express';
 
 class AppStart {
   static expressInstance = express();
@@ -14,9 +14,7 @@ class AppStart {
   }
 
   static listenServer() {
-    AppStart.expressInstance.listen(() => {
-      console.log('App started...');
-    }, 3000);
+    AppStart.expressInstance.listen(3000);
   }
 
   static main() {
@@ -27,4 +25,4 @@ class AppStart {
   }
 }
 
-module.exports = AppStart;
+export default AppStart;
