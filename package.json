@@ -44,7 +44,7 @@
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "pm2": "^4.5.6",
-    "reflection": "^0.0.1",
+    "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.5.0"
   }
 }

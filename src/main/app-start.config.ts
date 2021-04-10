@@ -1,16 +1,12 @@
-import EnvironmentConfig from './environment.config';
-import ExpressConfig from './express.config';
+import { inject, injectable } from 'tsyringe';
+import IConfigPort from '../infra/config/config.port';
 
+@injectable()
 class AppStart {
-  /**
-   * @access public
-   * @description This method is application entrypoit,
-   * avoid change order of internal methods call
-   * @returns void
-   */
-  public static main(): void {
-    EnvironmentConfig.loadEnvinronmentVariables();
-    ExpressConfig.initializeExpressInstance();
+  private readonly configPort: IConfigPort;
+
+  constructor(@inject('IConfigPort') configPort: IConfigPort) {
+    this.configPort = configPort;
   }
 }
 

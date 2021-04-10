@@ -1,3 +1,7 @@
-import App from './app-start.config';
+import 'reflect-metadata';
+import { container } from 'tsyringe';
+import InjectAll from '../infra/di/inject-all';
 
-App.main();
+InjectAll.execute();
+
+container.resolve('AppStart');
