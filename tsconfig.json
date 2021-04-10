@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
-        "module": "CommonJS"
-    }
+        "module": "CommonJS",
+    },
+    "include": [
+        "src"
+    ]
 }
