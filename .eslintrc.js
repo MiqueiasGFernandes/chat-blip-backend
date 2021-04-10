@@ -18,6 +18,8 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'import/extensions': 'off',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-unused-vars': 2,
   },
   settings: {
     'import/resolver': {
