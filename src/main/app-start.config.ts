@@ -1,19 +1,23 @@
 import { inject, injectable } from 'tsyringe';
 import IConfigPort from '../infra/config/config.port';
-import IServerPort from '../infra/server/server.port';
+import IRouterRegister from './router-register.interface';
+import IServer from './server.insterface';
 
 @injectable()
 class AppStart {
-  private readonly configPort: IConfigPort;
+  public readonly configPort: IConfigPort;
 
-  private readonly serverPort: IServerPort;
+  public readonly serverPort: IServer;
 
   constructor(
       @inject('IConfigPort') configPort: IConfigPort,
-      @inject('IServerPort') serverPort: IServerPort,
+      @inject('IServer') serverPort: IServer,
+      @inject('IRouterRegister') routerRegister: IRouterRegister,
   ) {
     this.configPort = configPort;
     this.serverPort = serverPort;
+
+    routerRegister.register();
   }
 }
 
