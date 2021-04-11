@@ -1,4 +1,4 @@
-import RepositoryModel from './repository.model';
+import RepositoryModel from '../_common/models/repository.model';
 
 interface IListRepositoryUseCase {
   list(): Promise<RepositoryModel[]>

@@ -2,7 +2,7 @@ import { inject, injectable } from 'tsyringe';
 import IConfigPort from '../../infra/config/config.port';
 import IGithubApiPort from '../../infra/github-api/github-api.port';
 import IListRepositoryUseCase from './list-repository.use-case';
-import RepositoryModel from './repository.model';
+import RepositoryModel from '../_common/models/repository.model';
 
 @injectable()
 class ListRepositoryService implements IListRepositoryUseCase {
