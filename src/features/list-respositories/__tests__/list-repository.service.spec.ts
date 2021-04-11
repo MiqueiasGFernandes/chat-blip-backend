@@ -3,9 +3,6 @@ import ConfigPortSpy from '../../../util/mocks/env.config.adapter.spy';
 import GithubApiAdapterSpy from '../../../util/mocks/github-api.adapter.spy';
 import ListRepositoryService from '../list-repository.service';
 
-jest.mock('../../../infra/github-api/node-fetch.adapter');
-jest.mock('../../../infra/github-api/node-fetch.adapter');
-
 type SpyTypes = {
   githubApiAdapterSpy: GithubApiAdapterSpy
   configPortSpy: ConfigPortSpy
