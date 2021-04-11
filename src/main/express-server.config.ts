@@ -32,7 +32,7 @@ class ExpressServeConfig implements IServer {
 
   public async get(path: string, controller: string): Promise<void> {
     const controllerInstace = container.resolve<IGetBaseController>(controller);
-    this.express.get(path, controllerInstace.get);
+    this.express.get(path, (request, responde) => { controllerInstace.get(request, responde); });
   }
 }
 

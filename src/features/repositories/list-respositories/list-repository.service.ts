@@ -19,7 +19,7 @@ class ListRepositoryService implements IListRepositoryUseCase {
   }
 
   public async listByCreatedAscOrder(): Promise<RepositoryModel[]> {
-    const apiUrl = this.configPort.getString('GITHUB_API_PORT');
+    const apiUrl = this.configPort.getString('GITHUB_API_URL');
     const result = await this.githubApiPort.get(`${apiUrl}?sort=created&&direction=asc`);
     return result as RepositoryModel[];
   }

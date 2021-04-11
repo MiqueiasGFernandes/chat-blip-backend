@@ -1,8 +1,7 @@
-import { Response } from 'express';
-import BaseController from './base.controller';
+import { Request, Response } from 'express';
 
-interface IGetBaseController extends BaseController {
-  get(): Promise<Response>
+interface IGetBaseController {
+  get(request: Request, response: Response): Promise<void>
 }
 
 export default IGetBaseController;
