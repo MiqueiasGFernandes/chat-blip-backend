@@ -5,9 +5,9 @@ import RepositoriesProvider from '../../features/repositories/repositories.provi
 
 class InjectAll {
   public static execute() {
-    MainProvider.injectDependencies();
     InfraProvider.injectDependencies();
     RepositoriesProvider.injectDependencies();
+    MainProvider.injectDependencies();
   }
 }
 
