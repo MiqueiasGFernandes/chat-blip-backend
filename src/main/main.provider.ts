@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { container } from 'tsyringe';
 import AppStart from './app-start.config';
-import ExpressServerAdapter from './express-server.adapter';
+import ExpressServerAdapter from './express-server.config';
 import RoutesRegister from './routes-register.config';
 
 class ListRespositoriesProvider {
