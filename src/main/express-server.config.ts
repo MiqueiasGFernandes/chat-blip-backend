@@ -6,7 +6,7 @@ import IConfigPort from '../infra/config/config.port';
 import IServer from './server.insterface';
 
 @singleton()
-class ExpressServerAdapter implements IServer {
+class ExpressServeConfig implements IServer {
   private readonly server: Server
 
   private readonly express: Express;
@@ -36,4 +36,4 @@ class ExpressServerAdapter implements IServer {
   }
 }
 
-export default ExpressServerAdapter;
+export default ExpressServeConfig;
