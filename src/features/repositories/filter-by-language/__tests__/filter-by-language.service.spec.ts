@@ -1,5 +1,5 @@
-import repositoresListMock from '../../../util/mocks/repositories-list-with-languages.mock';
-import RepositoryModel from '../../_common/models/repository.model';
+import repositoresListMock from '../../../../util/mocks/repositories-list-with-languages.mock';
+import RepositoryModel from '../../../_common/models/repository.model';
 import FilterByLanguageRepositorySpy from '../filter-by-language.service';
 
 describe('filter-by-language.repository', () => {

@@ -1,6 +1,6 @@
 import 'reflect-metadata';
-import ConfigPortSpy from '../../../util/mocks/env.config.adapter.spy';
-import GithubApiAdapterSpy from '../../../util/mocks/github-api.adapter.spy';
+import ConfigPortSpy from '../../../../util/mocks/env.config.adapter.spy';
+import GithubApiAdapterSpy from '../../../../util/mocks/github-api.adapter.spy';
 import ListRepositoryService from '../list-repository.service';
 
 type SpyTypes = {

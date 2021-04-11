@@ -1,4 +1,4 @@
-import RepositoryModel from '../_common/models/repository.model';
+import RepositoryModel from '../../_common/models/repository.model';
 import IFilterByLanguage from './filter-by-language.use-case';
 import NotFoundError from './not-found.error';
 
