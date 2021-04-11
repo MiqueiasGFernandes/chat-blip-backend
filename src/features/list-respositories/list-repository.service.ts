@@ -18,9 +18,9 @@ class ListRepositoryService implements IListRepositoryUseCase {
     this.configPort = configPort;
   }
 
-  public async list(): Promise<RepositoryModel[]> {
+  public async listByCreatedAscOrder(): Promise<RepositoryModel[]> {
     const apiUrl = this.configPort.getString('GITHUB_API_PORT');
-    const result = await this.githubApiPort.get(apiUrl);
+    const result = await this.githubApiPort.get(`${apiUrl}?sort=created&&direction=asc`);
     return result as RepositoryModel[];
   }
 }

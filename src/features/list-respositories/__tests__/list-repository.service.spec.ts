@@ -26,7 +26,7 @@ describe('list-repository.service', () => {
       test('SHOULD return an RepositoryModel', async () => {
         const { githubApiAdapterSpy, configPortSpy } = makeSpy();
         const serviceSpy = new ListRepositoryService(githubApiAdapterSpy, configPortSpy);
-        const sut = await serviceSpy.list();
+        const sut = await serviceSpy.listByCreatedAscOrder();
         expect(sut).toBeInstanceOf(Array);
       });
     });
