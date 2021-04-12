@@ -1,11 +1,10 @@
 import { inject, injectable } from 'tsyringe';
 import IConfigPort from '../../../infra/config/config.port';
 import IGithubApiPort from '../../../infra/github-api/github-api.port';
-import IListRepositoryUseCase from './list-repository.use-case';
-import RepositoryModel from '../../_common/models/repository.model';
+import IGetOrganizationAvatarUseCase from './get-organization-avatar.use-case';
 
 @injectable()
-class ListRepositoryService implements IListRepositoryUseCase {
+class GetOrganizationAvatarService implements IGetOrganizationAvatarUseCase {
   private readonly githubApiPort: IGithubApiPort;
 
   private readonly configPort: IConfigPort;
@@ -18,11 +17,13 @@ class ListRepositoryService implements IListRepositoryUseCase {
     this.configPort = configPort;
   }
 
-  public async listByCreatedAscOrder(): Promise<RepositoryModel[]> {
-    const apiUrl = this.configPort.getString('GITHUB_API_REPOS');
-    const result = await this.githubApiPort.get(`${apiUrl}?sort=created&&direction=asc`);
-    return result as RepositoryModel[];
+  public async getAvatar(): Promise<Record<string, string>> {
+    const organizationInfo = await this.githubApiPort
+      .get(this.configPort.getString('GITHUB_API_AVATAR'));
+
+    const avatar = organizationInfo.avatar_url;
+    return avatar;
   }
 }
 
-export default ListRepositoryService;
+export default GetOrganizationAvatarService;

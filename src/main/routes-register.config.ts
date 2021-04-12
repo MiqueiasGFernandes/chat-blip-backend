@@ -12,6 +12,7 @@ class RoutesRegister implements IRouterRegister {
 
   public register(): void {
     this.router.get('/repositories', 'RepositoryController');
+    this.router.get('/avatar', 'AvatarController');
   }
 }
 
