@@ -16,11 +16,10 @@ class RepositoryController implements IGetBaseRepository {
   public async get(_request: Request, response: Response): Promise<void> {
     try {
       const result = await this.repositoryServiceInteraction.list();
-      response.send({ successfully: true, body: result, statusCode: 200 });
+      response.send(result);
     } catch (error) {
       console.error(error);
-      const { statusCode } = error;
-      response.send({ statusCode: statusCode || 500, message: error.message, successfully: false });
+      response.send({ message: error.message });
     }
   }
 }

@@ -5,11 +5,13 @@ import GetOrganizationAvatarService from './get-organization-avatar/get-organiza
 import ListRepositoryService from './list-respositories/list-repository.service';
 import RepositoryController from './repository.controller';
 import RepositoryService from './repository.service';
+import ToLimeCollectionService from './to-lime-collection/to-lime-collection.service';
 
 class ListRespositoriesProvider {
   static injectDependencies() {
     container
-      .register('IGetOrganizationAvatarUseCase', { useClass: GetOrganizationAvatarService })
+      .register('ToLimeCollectionUseCase', { useClass: ToLimeCollectionService })
+      .register('GetOrganizationAvatarUseCase', { useClass: GetOrganizationAvatarService })
       .register<RepositoryController>('RepositoryController', { useClass: RepositoryController })
       .register('FilterByLanguageUseCase', { useClass: FilterByLanguageRepository })
       .register('ListRepositoryUseCase', { useClass: ListRepositoryService })
