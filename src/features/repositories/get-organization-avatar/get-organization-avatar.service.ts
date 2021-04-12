@@ -17,7 +17,7 @@ class GetOrganizationAvatarService implements IGetOrganizationAvatarUseCase {
     this.configPort = configPort;
   }
 
-  public async getAvatar(): Promise<Record<string, string>> {
+  public async getAvatar(): Promise<string> {
     const organizationInfo = await this.githubApiPort
       .get(this.configPort.getString('GITHUB_API_AVATAR'));
 

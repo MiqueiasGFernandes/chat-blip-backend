@@ -1,5 +1,5 @@
 interface IGetOrganizationAvatarUseCase {
-  getAvatar(): Promise<Record<string, string>>
+  getAvatar(): Promise<string>
 }
 
 export default IGetOrganizationAvatarUseCase;
