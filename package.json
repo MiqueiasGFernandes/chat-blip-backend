@@ -11,7 +11,8 @@
     "test": "jest --no-cache --passWithNoTests",
     "test:watch": "npm run test -- --watchAll",
     "test:ci": "npm run test -- --coverage",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku master",
+    "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "@types/body-parser": "^1.19.0",
     "consign": "^0.1.6",
     "cors": "^2.8.5",
+    "coveralls": "^3.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
