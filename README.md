@@ -141,7 +141,7 @@ A API está hospedada em: http://fernandes-chat-blip-api.herokuapp.com/repositor
 
 ### Demonstração
 
-<img src="/docs/demo.png">
+<img src="/docs/demo.gif">
 
 ## Observação
 
