@@ -1,8 +1,6 @@
 # CHAT BLIP 
 
-[![Coverage Status](https://coveralls.io/repos/github/MiqueiasGFernandes/fernandes-chat-blip/badge.svg?branch=master)](https://coveralls.io/github/MiqueiasGFernandes/fernandes-chat-blip?branch=master)
-
-[![Build Status](https://travis-ci.com/MiqueiasGFernandes/fernandes-chat-blip.svg?branch=master)](https://travis-ci.com/MiqueiasGFernandes/fernandes-chat-blip)
+[![Coverage Status](https://coveralls.io/repos/github/MiqueiasGFernandes/fernandes-chat-blip/badge.svg?branch=master)](https://coveralls.io/github/MiqueiasGFernandes/fernandes-chat-blip?branch=master) [![Build Status](https://travis-ci.com/MiqueiasGFernandes/fernandes-chat-blip.svg?branch=master)](https://travis-ci.com/MiqueiasGFernandes/fernandes-chat-blip)
 
 ## Descrição
 
