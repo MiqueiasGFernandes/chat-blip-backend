@@ -7,7 +7,9 @@
     "start": "nodemon ./src/main/index.ts",
     "lint": "eslint ./src/**/**.ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest --no-cache --passWithNoTests"
+    "test": "jest --no-cache --passWithNoTests",
+    "test:watch": "npm run test -- --watchAll",
+    "test:ci": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
